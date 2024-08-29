@@ -1,4 +1,5 @@
 import {portfolioList} from '../data/DataPortfolio'
+import { Link } from 'react-router-dom'
 import '../styles/Portfolio.css'
 function Portfolio() {
   return (
@@ -10,7 +11,7 @@ function Portfolio() {
                 portfolioList.map((item)=> {
                   return (
                     <div className="item" key={item.id}>
-                      <a href=""><img src={item.image} /></a>
+                      <Link to={`/portfolio/${item.id}`}><img src={item.image} /></Link>
                     </div>
                   )
                 })
